@@ -1,23 +1,3 @@
-# Auto_Response_Bot_for_WhatsApp
-
-An 'Auto Reply BOT', that is capable of reading the message and replying to it with specific replies on WhatsApp.
-
-
-1. Download whatsapp for desktop https://www.whatsapp.com/download
-
-
-2. Go to the settings of the app -> theme -> select light
-
-
-3. Clone the repository using '*git clone https://github.com/ConstantiNish/Auto_Response_Bot_for_WhatsApp*'
-
-
-4. Change the replies as you prefer, in the wa.py file.
-
-
-5. Run the wa.py file.
-
-
-
-WATCH MY YOUTUBE VIDEO FOR COMPLETE PROCEDURE https://youtu.be/uTtELWy4uOI  *-channel link*
-
+Using the original to improve upon some aspects, such as the ability to circumvent not being able to pick up new messages while your conversation is open.
+To ensure we can pick up on new messages, after we get a new message from a user we will instantly be able to delete his chat (keep in mind the conversation is kept on your mobile device).
+That way, when that user messages us again we will be able to pick up new messages, as WhatsApp for some reason removed the "close chat" X button from the right hand corner of the chat window, therefore you are not able to grab new messages if your chat with that users is the current one displayed on screen.
