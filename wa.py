@@ -1,4 +1,6 @@
 import pyautogui as pt
+import shutil
+import os
 from time import sleep
 import pyperclip
 import random
@@ -50,15 +52,22 @@ def process_response(message):
 
     else:
         if "hi"in str(message).lower():
+
             return "Hey, a bit busy right now. just drop a message ill talk to you later- Bot Constantine"
+
         elif "happy new year"in str(message).lower():
             return "Wishing you and your family a very Happy New Year! ✨.May this year bring joy and happiness in your life! - Bot Constantine "
         elif "good morning"in str(message).lower():
             return"Good Morning! Have a great day"
         elif "good night"in str(message).lower():
             return"Good Night! Sleep tight"
+        elif "analysis" in str(message).lower():
+            return "http://www.africau.edu/images/default/sample.pdf"
         else :
-            return "Hello! Dear Sir/Madam, Nishanth is currently unavailable to reply. Do drop your messages. - Bot Constantine"
+            return "Hello! Dear Sir/Madam, Djole is currently unavailable to reply. Do drop your messages. - Bot Constantine"
+
+
+
 
 
 #new messages check
@@ -75,11 +84,18 @@ def check_for_new_messages():
                 pt.click()
                 processed_message = process_response(get_message())
                 post_response(processed_message)
-                sleep(10)
+                with pt.hold('ctrlleft'):
+                    with pt.hold('shift'):
+                        pt.press('d')
+                sleep(1)
+                position = pt.locateOnScreen("deletechat.png", confidence=.6)
+                pt.moveTo(position)
+                pt.click()
+                sleep(5)
 
             else:
                 print("No messages")
-                sleep(10)
+                sleep(5)
 
         except(Exception):
             print("No new messages")
